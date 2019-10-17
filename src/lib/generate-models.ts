@@ -1,8 +1,7 @@
-// import fs from 'fs';
-// import * as _ from 'lodash';
-// import path from 'path';
-// import { getFields } from "../services/get-fields";
-// import { getLists } from "../services/get-Lists";
+
+import * as _ from 'lodash';
+import { getFields } from "../services/get-fields";
+import { getLists } from "../services/get-Lists";
 
 /**
  * Gets all of the Entries supported by DealCloud. These Entries can be used
@@ -27,22 +26,9 @@
  * ```
  */
 
-// export async function models({ client}): Promise<ReadonlyArray<string>> {
+export async function models({client}) {
 
-//     const lists = await getLists(client);
-//     const fields = await getFields(client);
-
-//     // if models folder doesn't exist create it
-//     const modelsfolder = path.join(process.cwd(), 'models')
-    
-//     fs.mkdirSync(modelsfolder)
-
-//     // tslint:disable-next-line: no-expression-statement
-//     lists.forEach(entrylist => {
-//         const entryListFields = _.filter(fields, {EntryListId: entrylist.Id});
-//         const name = entrylist.name.replace(/[^a-zA-Z0-9]/g, ''); 
-//         // tslint:disable-next-line: no-expression-statement
-//         fs.writeFile(path.join(modelsfolder. name),entryListFields, (r = > console.log('model written'));
-//     });
-//     return lists
-// }
+    const requests = [getLists(client), getFields(client)];
+    const results = await Promise.all(requests);
+    return results
+}

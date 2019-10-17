@@ -6,7 +6,7 @@ export * from './services/get-fields';
 export * from './services/get-users';
 export * from './services/get-list-entries';
 export * from './services/get-modified-entries';
-
+export * from './lib/generate-models';
 // GetAllEntries: [Object],
 // ProcessDCPull: [Object],
 // GetFilteredEntries: [Object],
