@@ -18,12 +18,12 @@ import * as soap from "soap"
  * 
  * ```
  */
-// interface Params {
-//     username: string;
-//     password: string;
-//     url: string;
-// }
-export async function createClient(params, options): Promise<soap.Client> {
+interface Params {
+    readonly username: string;
+    readonly password: string;
+    readonly url: string;
+}
+export async function createClient(params: Params, options): Promise<soap.Client> {
     const url: string = `${params.url}/Services/v2/DCDataService.svc?singleWsdl`
     const DCClient: soap.Client = await soap.createClientAsync(url, options).then((client: soap.Client)=> client);
     const wsSecurity: soap.WSSecurity = new soap.WSSecurity(params.username, params.password)
