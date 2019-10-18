@@ -1,5 +1,6 @@
-
-import * as _ from 'lodash';
+// import fs from 'fs';
+// import * as _ from 'lodash';
+// import path from 'path';
 import { getFields } from "../services/get-fields";
 import { getLists } from "../services/get-Lists";
 
@@ -26,9 +27,8 @@ import { getLists } from "../services/get-Lists";
  * ```
  */
 
-export async function models({client}) {
+export async function models({ client}) {
 
-    const requests = [getLists(client), getFields(client)];
-    const results = await Promise.all(requests);
+    const results = Promise.all([getLists(client),getFields(client)])
     return results
 }
