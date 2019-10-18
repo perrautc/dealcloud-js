@@ -1,0 +1,15 @@
+export type filterOperations =
+  | 'Equals'
+  | 'Contains'
+  | 'Greater'
+  | 'GreaterOrEqual'
+  | 'Less'
+  | 'LessOrEqual'
+  | 'StartsWith'
+  | 'In'
+  | 'Between'
+  | 'NotIn'
+  | 'NotEqualTo'
+  | 'DoesntContain'
+  | 'NoData'
+  | 'NotNoData';

@@ -6,7 +6,8 @@ export * from './services/get-fields';
 export * from './services/get-users';
 export * from './services/get-list-entries';
 export * from './services/get-modified-entries';
-
+export * from './services/get-filtered-entries';
+export * from './lib/filtered-info';
 // GetAllEntries: [Object],
 // ProcessDCPull: [Object],
 // GetFilteredEntries: [Object],
