@@ -8,18 +8,30 @@ import { Client } from 'soap';
  * ``` js
  * import { getFilteredEntries, createClient } from 'dealcloud'
  * let params = {username: '', password: '', url: ''}
- * let client = createClient(params, {})
- * getFilteredEntries({client, entryListId, fromDate}).then(console.log)
- * // => [
- * {
- *   "NamedEntry": [
- *     {
- *       "EntryListId": 32977,
- *       "Id": 2407679,
- *       "Name": "Test LA 200 DealCloud Capital I"
- *     }
- *   ]
- *  }
+ * const client = await createClient(params, {});
+ * let filter = {
+ * 'CurrencyCode': "",
+ * 'FieldId': 42173,
+ * 'FilterOperation': 'Contains',
+ * 'Value': "E",
+ * 'ValueTo': ""
+ * }
+ * 
+ * const result = await getFilteredEntries({
+ *   client,
+ *   entryListId,
+ *   "srcFilters": filters
+ * });
+ * // => {
+ *   "int": [
+ *     3217853,
+ *     3217850,
+ *     3217865,
+ *     3217857,
+ *     3217871,
+ *     3217859,
+ *    3217855]
+ *   }
  * ```
  */
 
@@ -35,9 +47,9 @@ export async function getFilteredEntries({
   return new Promise<ReadonlyArray<string>>((resolve, reject) => {
     // tslint:disable-next-line: no-expression-statement
     client.DCDataService.CustomBinding_IDCDataService2.GetFilteredEntries(
-      { srcFilters, entryListId },
+      { entryListId, srcFilters },
       (err, result) => {
-        return err ? reject(err) : resolve(result);
+        return err ? reject(err) : resolve(result.GetFilteredEntriesResult);
       }
     );
   });

@@ -3,8 +3,11 @@ import { Client } from "soap";
 /**
  * Gets all of the Lists supported by DealCloud. These Lists can be used
  * with the dealcloud API to get currency conversions on the fly
- * 
- * ### Example
+ * @export getLists
+ * @param {Client} client
+ * @returns {Promise<ReadonlyArray<string>>}
+ *
+ *  ### Example
  * ``` js
  * import { getLists, createClient } from 'dealcloud'
  * let params = {username: '', password: '', url: ''}
@@ -31,6 +34,11 @@ import { Client } from "soap";
  * }
  * ]
  * ```
+ */
+
+/**
+ *
+ *
  */
 export async function getLists(client: Client): Promise<ReadonlyArray<string>> {
   return new Promise<ReadonlyArray<string>>((resolve, reject) => {

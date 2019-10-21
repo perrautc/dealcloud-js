@@ -50,6 +50,7 @@
     "node": ">=8.9"
   },
   "dependencies": {
+    "he": "^1.2.0",
     "lodash": "^4.17.15",
     "soap": "^0.30.0",
     "strong-soap": "^1.21.0"

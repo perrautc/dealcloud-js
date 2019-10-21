@@ -22,10 +22,16 @@ import { Client } from "soap";
  * ```
  */
 
-export async function getModifiedEntries(
-{ client, fromDate, entryListId }: { readonly client: Client; readonly fromDate: Date; readonly entryListId: number; }): Promise<ReadonlyArray<string>> {
+export async function getModifiedEntries({
+  client,
+  fromDate,
+  entryListId
+}: {
+  readonly client: Client;
+  readonly fromDate: Date;
+  readonly entryListId: number;
+}): Promise<ReadonlyArray<string>> {
   return new Promise<ReadonlyArray<string>>((resolve, reject) => {
-
     // tslint:disable-next-line: no-expression-statement
     client.DCDataService.CustomBinding_IDCDataService2.GetEntriesModifiedSince(
       { fromDate, entryListId },

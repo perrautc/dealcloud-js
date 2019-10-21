@@ -7,9 +7,14 @@ export * from './services/get-users';
 export * from './services/get-list-entries';
 export * from './services/get-modified-entries';
 export * from './services/get-filtered-entries';
+export * from './services/process-dcpull';
+
+
 export * from './lib/filtered-info';
-// GetAllEntries: [Object],
+export * from './lib/generate-schema';
+export * from './lib/create-dcpull';
+
 // ProcessDCPull: [Object],
-// GetFilteredEntries: [Object],
 // ProcessDCPush: [Object],
 // GetFile: [Object]
+// GetAllEntries: [Object],
