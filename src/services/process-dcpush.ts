@@ -1,4 +1,4 @@
-export function processDCPushAsync({ client, entryListId, DCPushs }) {
+export async function processDCPushAsync({ client, entryListId, DCPushs }) {
   const DCPushRequest = {
     entryListId,
     requests: {

@@ -24,17 +24,20 @@
  * ```
  */
 
-export async function processDCPullAsync({client, DCPulls}) {
-    const DCPullRequest = {
-        fillextendeddata: true,
-        requests: {
-            DCPull: DCPulls
-        },
-        resolveReferenceUrls: true
-    }
+export async function processDCPullAsync({
+  client,
+  DCPulls
+}): Promise<ReadonlyArray<string>> {
+  const DCPullRequest = {
+    fillextendeddata: true,
+    requests: {
+      DCPull: DCPulls
+    },
+    resolveReferenceUrls: true
+  };
 
-    const results = await processDCPull({client, DCPullRequest});
-    return results;
+  const results = await processDCPull({ client, DCPullRequest });
+  return results;
 }
 
 async function processDCPull({

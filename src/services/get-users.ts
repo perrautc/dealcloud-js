@@ -30,10 +30,11 @@ import { Client } from "soap";
 export async function getUsers(
 { client, activeOnly }: { readonly client: Client; readonly activeOnly: boolean; }): Promise<ReadonlyArray<string>> {
   return new Promise<ReadonlyArray<string>>((resolve, reject) => {
-    // tslint:disable-next-line: no-expression-statement
     client.DCDataService.CustomBinding_IDCDataService2.GetUsers(
       { activeOnly },
-      (err, result) => (err ? reject(err) : resolve(result))
+      (err, result) => {
+        return (err ? reject(err) : resolve(result));
+      }
     );
   });
 }

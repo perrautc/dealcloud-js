@@ -29,7 +29,7 @@ export async function getListEntries(
     client.DCDataService.CustomBinding_IDCDataService2.GetListEntries(
       { entryListId },
       (err, result) => {
-          return (err ? reject(err) : resolve(result));
+          return (err ? reject(err) : resolve(result.GetListEntriesResult));
       }
     );
   });
