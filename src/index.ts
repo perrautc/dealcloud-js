@@ -8,7 +8,7 @@ export * from './services/get-list-entries';
 export * from './services/get-modified-entries';
 export * from './services/get-filtered-entries';
 export * from './services/process-dcpull';
-
+export * from './services/process-dcpush';
 
 export * from './lib/filtered-info';
 export * from './lib/generate-schema';

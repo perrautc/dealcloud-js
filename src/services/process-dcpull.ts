@@ -1,3 +1,4 @@
+
 /**
  * Gets all of the Fields supported by DealCloud. These Fields can be used
  * with the dealcloud API to get currency conversions on the fly
@@ -29,15 +30,14 @@ export async function processDCPullAsync({
   DCPulls
 }): Promise<ReadonlyArray<string>> {
   const DCPullRequest = {
-    fillextendeddata: true,
+    'fillextendeddata': true,
     requests: {
       DCPull: DCPulls
     },
     resolveReferenceUrls: true
   };
 
-  const results = await processDCPull({ client, DCPullRequest });
-  return results;
+  return processDCPull({ client, DCPullRequest });
 }
 
 async function processDCPull({
@@ -49,7 +49,7 @@ async function processDCPull({
     client.DCDataService.CustomBinding_IDCDataService2.ProcessDCPull(
       DCPullRequest,
       (err, result) =>
-        err ? reject(err) : resolve(result.ProcessDCPullResult.DCResult)
+        err ? reject(err) : resolve(result)
     );
   });
 }

@@ -1,4 +1,4 @@
-export async function processDCPushAsync({ client, entryListId, DCPushs }) {
+export async function processDCPushAsync({ client, entryListId, DCPushs }): Promise<ReadonlyArray<string>> {
   const DCPushRequest = {
     entryListId,
     requests: {
@@ -6,8 +6,7 @@ export async function processDCPushAsync({ client, entryListId, DCPushs }) {
     }
   };
 
-  const results = await processDCPush({ client, DCPushRequest });
-  return results;
+  return processDCPush({ client, DCPushRequest });
 }
 
 async function processDCPush({
