@@ -2,7 +2,7 @@ import * as he from "he";
 import * as _ from "lodash";
 import { Client } from "soap";
 import { getFields } from "../services/get-fields";
-import { getLists } from "../services/get-Lists";
+import { getLists } from "../services/get-lists";
 
 /**
  * Gets all of the Entries supported by DealCloud. These Entries can be used
