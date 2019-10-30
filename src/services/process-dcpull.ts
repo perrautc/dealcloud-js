@@ -49,7 +49,7 @@ async function processDCPull({
     client.DCDataService.CustomBinding_IDCDataService2.ProcessDCPull(
       DCPullRequest,
       (err, result) =>
-        err ? reject(err) : resolve(result)
+        err ? reject(err) : resolve(result.ProcessDCPullResult.DCResult)
     );
   });
 }
