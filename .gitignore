@@ -3,6 +3,7 @@ build
 test
 src/**.js
 .idea/*
+test-params.json
 
 coverage
 .nyc_output

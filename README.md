@@ -1,3 +1,2 @@
-# dealcloud-js
+#DealCloud
 
-a typescript-starter project
