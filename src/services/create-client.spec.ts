@@ -8,5 +8,5 @@ test('creates a client', async t => {
     const params = await readJSONSync(path.join(process.cwd(), 'test-params.json'));
 	const client = await createClient(params, {});
 	// tslint:disable-next-line: no-expression-statement
-	t.true(client);
+	t.true(client.hasOwnProperty("DCDataService"));
 });

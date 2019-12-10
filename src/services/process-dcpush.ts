@@ -5,7 +5,7 @@ export async function processDCPushAsync({ client, entryListId, DCPushs }): Prom
       DCPush: DCPushs
     }
   };
-
+  // console.log(DCPushs)
   return processDCPush({ client, DCPushRequest });
 }
 

@@ -1,5 +1,6 @@
 export * from './lib/number';
 export * from './services/create-client';
+export * from './services/create-client-v2';
 export * from './services/get-currencies';
 export * from './services/get-lists';
 export * from './services/get-fields';

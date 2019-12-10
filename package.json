@@ -52,7 +52,8 @@
   "dependencies": {
     "he": "^1.2.0",
     "lodash": "^4.17.15",
-    "soap": "^0.30.0"
+    "soap": "^0.30.0",
+    "strong-soap": "^1.21.0"
   },
   "devDependencies": {
     "@bitjson/npm-scripts-info": "^1.0.0",
