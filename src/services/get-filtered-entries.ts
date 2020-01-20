@@ -1,5 +1,3 @@
-import { Client } from 'soap';
-
 /**
  * Gets all of the Entries supported by DealCloud. These Entries can be used
  * with the dealcloud API to get currency conversions on the fly
@@ -39,10 +37,6 @@ export async function getFilteredEntries({
   client,
   srcFilters,
   entryListId
-}: {
-  readonly client: Client;
-  readonly srcFilters: ReadonlyArray<object>;
-  readonly entryListId: number;
 }): Promise<ReadonlyArray<string>> {
   return new Promise<ReadonlyArray<string>>((resolve, reject) => {
     // tslint:disable-next-line: no-expression-statement
