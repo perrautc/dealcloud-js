@@ -76,7 +76,7 @@ export async function getSchema(
         _.find(allLists, x => x["Id"] == key) !== undefined
           ? _.find(allLists, x => x["Id"] == key)["SingularName"]
           : key;
-      return { list: he.decode(newKey).replace("?", ""), fields: value };
+      return { list: he.decode(newKey).replace("?", ""), entryListId: parseInt(key),  fields: value };
     })
     .value();
   return groupedFields;
