@@ -1,6 +1,6 @@
 {
   "name": "dealcloud-js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "a project to connect to Dealcloud",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
