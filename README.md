@@ -1,5 +1,8 @@
 #DealCloud
 
+### Other Resources
+[Dealcloud-Python](https://github.com/holtjp/dealcloud-python)
+
 ## install
 ```
     npm install dealcloud-js
