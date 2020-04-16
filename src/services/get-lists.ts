@@ -1,4 +1,4 @@
-import { Client } from "soap";
+import { Client } from "strong-soap";
 
 /**
  * Gets all of the Lists supported by DealCloud. These Lists can be used

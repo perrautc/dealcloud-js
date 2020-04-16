@@ -1,6 +1,6 @@
 import * as he from "he";
 import * as _ from "lodash";
-import { Client } from "soap";
+import { Client } from "strong-soap";
 import { getFields } from "../services/get-fields";
 import { getLists } from "../services/get-lists";
 

@@ -15,7 +15,3 @@ export * from './lib/filtered-info';
 export * from './lib/generate-schema';
 export * from './lib/create-dcpull';
 
-// ProcessDCPull: [Object],
-// ProcessDCPush: [Object],
-// GetFile: [Object]
-// GetAllEntries: [Object],

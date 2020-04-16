@@ -5,7 +5,7 @@
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
   "module": "build/module/index.js",
-  "repository": "https://gitlab.com/dealcloud/dealcloud-js",
+  "repository": "https://github.com/perrautc/dealcloud-js",
   "license": "MIT",
   "keywords": [],
   "scripts": {
@@ -52,7 +52,6 @@
   "dependencies": {
     "he": "^1.2.0",
     "lodash": "^4.17.15",
-    "soap": "^0.30.0",
     "strong-soap": "^1.21.0"
   },
   "devDependencies": {

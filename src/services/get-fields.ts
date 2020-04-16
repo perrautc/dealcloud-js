@@ -1,4 +1,4 @@
-import { Client } from "soap";
+import { Client } from "strong-soap";
 /**
  * Gets all of the Fields supported by DealCloud. These Fields can be used
  * with the dealcloud API to get currency conversions on the fly
