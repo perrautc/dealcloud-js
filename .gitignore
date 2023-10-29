@@ -1,0 +1,9 @@
+node_modules
+build
+test
+src/**.js
+test-params.json
+
+coverage
+.nyc_output
+*.log
